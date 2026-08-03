@@ -1,0 +1,420 @@
+/* Fonts */
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+}
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Style */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Plus Jakarta Sans";
+}
+.icon-pack{
+    display: none;
+}
+svg{
+    width: 24px;
+    height: 24px;
+}
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+a:hover,
+a:active{
+    color: #63757C;
+}
+.container{
+    width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.header{
+    margin: 30px 0 60px;
+}
+.header__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+.btn{
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 17px;
+    color: #fff;
+}
+.btn--black{
+    padding: 20px 45px;
+    background-color: #000000;
+    border: 1px solid #000000;
+    box-shadow: 0px 9.51px 22.52px -5px #0d0f125d;
+    transition: all 150ms cubic-bezier(0.46,0.03,0.52,0.96);
+}
+.btn--black:hover{
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+.header__bottom-links .btn{
+    animation: pulse 1.5s ease-in-out infinite;
+}
+.header__visual{
+    position: relative;
+    margin-top: 60px;
+}
+.visual__img{
+    width: 100%;
+}
+.visual__shadow{
+    position: absolute;
+    bottom: -140px;
+    right: 230px;
+    width: 90px;
+    height: 220px;
+    background-color: #63757C;
+    filter: blur(55px);
+    z-index: -1;
+    animation: floatingCard 2s ease-in-out infinite;
+    will-change: transform;
+}
+.visual__character{
+    position: absolute;
+    top: 0px;
+    right: 100px;
+    animation: floatingCard 2s ease-in-out infinite;
+    will-change: transform;
+}
+.visual__stat{
+    padding: 20px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px #00000025;
+    animation: floatingCard 2s ease-in-out infinite;
+    will-change: transform;
+}
+.visual__stat:nth-child(4){
+    bottom: -50px;
+    right: 475px;
+    width: 280px;
+}
+.visual__stat:nth-child(5){
+    bottom: 75px;
+    right: 94px;
+    width: 210px;
+}
+.visual__stat--dark{
+    bottom: -238px;
+    right: 180px;
+    width: 400px;
+    background-color: #000000;
+    color: #fff;
+}
+.stat__top{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 28px;
+    font-weight: 600;
+}
+.stat__top div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: #A9C2CB;
+    border-radius: 8px;
+}
+.stat__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+.stat__bottom span{
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+.visual__text{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 320px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.header__bottom{
+    width: 480px;
+    margin-top: 35px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.header__bottom-links{
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    margin-top: 35px;
+}
+.main__logos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.main__features{
+    display: flex;
+    padding: 20px 20px 20px 0px;
+}
+.feature__title{
+    width: 600px;
+    margin-right: 80px;
+    padding-top: 30px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.3;
+}
+.feature__title h2{
+    width: 520px;
+}
+.feature__cards{
+    display: flex;
+    column-gap: 60px;
+    flex-wrap: wrap;
+    width: 700px;
+}
+.feature__card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 0.25px solid #fff;
+    border-radius: 15px;
+    transition: all 150ms ease-in;
+}
+.feature__card:hover{
+    transform: scale(1.05);
+    border: 0.25px solid #a9c2cba2;
+}
+.feature__card div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 18px;
+    background-color: #A9C2CB;
+    border-radius: 15px;
+}
+.card__title{
+    margin-bottom: 15px;
+    font-size: 19px;
+    font-weight: 800;
+}
+.card__text{
+    font-weight: 500;
+    line-height: 1.6;
+}
+.main__topics{
+    position: relative;
+    margin-bottom: 350px;
+    margin-top: 20px;
+}
+.main__topics img{
+    width: 100%;
+}
+.topic__title{
+    width: 890px;
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+}
+.topic__cards{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 295px;
+    left: 75px;
+    width: 1200px;
+}
+.topic__card{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 48px 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10.01px 19.52px -6.01px #63757C;
+    transition: all 150ms ease-in;
+}
+.topic__card:hover{
+    transform: scale(1.07);
+}
+.card__num{
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 40px;
+    color: #A9C2CB;
+}
+.footer{
+    margin-bottom: 40px;
+}
+.footer__newsletter{
+    position: relative;
+    margin-bottom: 30px;
+}
+.footer__newsletter img{
+    width: 100%;
+}
+.newsletter__text{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+}
+.newsletter__text h3{
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 800;
+    color: #fff;
+}
+.newsletter__text p{
+    width: 710px;
+    margin-bottom: 50px;
+    color: #fff;
+    line-height: 1.8;
+}
+.newsletter__subscribe input{
+    width: 450px;
+    margin-right: 15px;
+    padding: 20px;
+    background-color: #fff;
+    color: #000000;
+    border-radius: 17px;
+    border: 1px solid #fff;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+}
+.newsletter__subscribe input:focus{
+    outline: none;
+}
+.newsletter__subscribe button{
+    width: 180px;
+    padding: 20px;
+    background-color: #A9C2CB;
+    color: #fff;
+    border: 1px solid #A9C2CB;
+    transition: all 100ms cubic-bezier(0.46,0.03,0.52,0.96);
+}
+.newsletter__subscribe button:active{
+    background-color: rgb(112, 164, 184);
+    border: 1px solid rgb(112, 164, 184);
+}
+.footer__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.dev__info{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.info__text span{
+    font-size: 18px;
+    color: #505f64;
+}
+.info__social a{
+    margin-right: 20px;
+}
+.links__legal a{
+    margin-left: 30px;
+}
+
+/* Animation */
+@keyframes floatingCard{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-6px);
+    }
+}
+@keyframes pulse{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}

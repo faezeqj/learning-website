@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODYSSEY</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="icon" href="images/favicon2.png">
+</head>
+<body>
+    <svg class="icon-pack">
+        <symbol id="graph" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.32 12.75H15C12.51 12.75 11.25 11.34 11.25 8.54996V5.67996C11.25 4.65996 11.37 3.19996 12.43 2.39996C13.32 1.73996 14.6 1.68996 16.49 2.23996C18.97 2.95996 21.04 5.02996 21.76 7.50996C22.31 9.38996 22.26 10.68 21.6 11.56C20.8 12.63 19.34 12.75 18.32 12.75ZM14.28 3.35996C13.87 3.35996 13.55 3.43996 13.34 3.59996C12.95 3.88996 12.76 4.56996 12.76 5.67996V8.55996C12.76 10.8 13.62 11.26 15.01 11.26H18.33C19.43 11.26 20.11 11.07 20.41 10.68C20.76 10.22 20.73 9.29996 20.34 7.94996C19.76 5.97996 18.06 4.26996 16.09 3.69996C15.35 3.46996 14.75 3.35996 14.28 3.35996Z" fill="#fff"/>
+            <path d="M11.0704 22.7498C10.5404 22.7498 10.0004 22.7098 9.46037 22.6198C5.37037 21.9598 2.04037 18.6398 1.38037 14.5498C0.530371 9.28983 3.92037 4.32983 9.11037 3.26983C9.52037 3.18983 9.91037 3.44983 10.0004 3.84983C10.0804 4.25983 9.82037 4.64983 9.42037 4.73983C5.03037 5.63983 2.15037 9.83983 2.88037 14.3098C3.44037 17.7698 6.25037 20.5798 9.71037 21.1398C14.2004 21.8598 18.3904 18.9698 19.2804 14.5598C19.3604 14.1498 19.7604 13.8898 20.1604 13.9698C20.5704 14.0498 20.8304 14.4498 20.7504 14.8498C19.8004 19.5198 15.7204 22.7498 11.0704 22.7498Z" fill="#fff"/>
+        </symbol>
+        <symbol id="heart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.6501C11.69 21.6501 11.39 21.6101 11.14 21.5201C7.32 20.2101 1.25 15.5601 1.25 8.6901C1.25 5.1901 4.08 2.3501 7.56 2.3501C9.25 2.3501 10.83 3.0101 12 4.1901C13.17 3.0101 14.75 2.3501 16.44 2.3501C19.92 2.3501 22.75 5.2001 22.75 8.6901C22.75 15.5701 16.68 20.2101 12.86 21.5201C12.61 21.6101 12.31 21.6501 12 21.6501ZM7.56 3.8501C4.91 3.8501 2.75 6.0201 2.75 8.6901C2.75 15.5201 9.32 19.3201 11.63 20.1101C11.81 20.1701 12.2 20.1701 12.38 20.1101C14.68 19.3201 21.26 15.5301 21.26 8.6901C21.26 6.0201 19.1 3.8501 16.45 3.8501C14.93 3.8501 13.52 4.5601 12.61 5.7901C12.33 6.1701 11.69 6.1701 11.41 5.7901C10.48 4.5501 9.08 3.8501 7.56 3.8501Z" fill="#fff"/>
+        </symbol>
+        <symbol id="timer" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22.75C6.76 22.75 2.5 18.49 2.5 13.25C2.5 8.01 6.76 3.75 12 3.75C17.24 3.75 21.5 8.01 21.5 13.25C21.5 18.49 17.24 22.75 12 22.75ZM12 5.25C7.59 5.25 4 8.84 4 13.25C4 17.66 7.59 21.25 12 21.25C16.41 21.25 20 17.66 20 13.25C20 8.84 16.41 5.25 12 5.25Z" fill="#fff"/>
+            <path d="M12 13.75C11.59 13.75 11.25 13.41 11.25 13V8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V13C12.75 13.41 12.41 13.75 12 13.75Z" fill="#fff"/>
+            <path d="M15 2.75H9C8.59 2.75 8.25 2.41 8.25 2C8.25 1.59 8.59 1.25 9 1.25H15C15.41 1.25 15.75 1.59 15.75 2C15.75 2.41 15.41 2.75 15 2.75Z" fill="#fff"/>
+        </symbol>
+        <symbol id="stopwatch" width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_10_224)">
+            <path d="M9.2583 3.18213C12.4364 3.18223 15.0132 5.66365 15.0132 8.7251C15.013 11.7864 12.4363 14.268 9.2583 14.2681C6.08021 14.2681 3.50362 11.7864 3.50342 8.7251C3.50342 5.66359 6.08008 3.18213 9.2583 3.18213ZM9.2583 5.30029C8.9781 5.30035 8.75078 5.51969 8.75049 5.78955V8.20361C8.44729 8.37271 8.24289 8.68858 8.24268 9.05029C8.24286 9.59041 8.69755 10.0288 9.2583 10.0288C9.81878 10.0285 10.2737 9.59022 10.2739 9.05029C10.2737 8.68871 10.0691 8.37276 9.76611 8.20361V5.78955C9.76582 5.51981 9.53833 5.30055 9.2583 5.30029ZM9.2583 1.50146C9.99566 1.50148 10.7099 1.59965 11.3872 1.78369C11.5871 1.83802 11.7059 2.04472 11.6519 2.24463C11.5974 2.44449 11.3908 2.5625 11.1909 2.5083C10.5772 2.34152 9.92883 2.25148 9.2583 2.25146C8.58775 2.25146 7.9394 2.34152 7.32568 2.5083C7.12573 2.56265 6.91924 2.44451 6.86475 2.24463C6.81069 2.04478 6.92863 1.8381 7.12842 1.78369C7.8059 1.59957 8.52074 1.50146 9.2583 1.50146Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_10_224" x="-6.67572e-06" y="-2.86102e-06" width="18.5166" height="19.7735" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset dy="2.00196"/>
+            <feGaussianBlur stdDeviation="1.75171"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.388451 0 0 0 0 0.459239 0 0 0 0 0.484722 0 0 0 0.8 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10_224"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_10_224" result="shape"/>
+            </filter>
+            </defs>
+        </symbol>
+        <symbol id="star" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.6601 22.6701C17.1301 22.6701 16.4501 22.5001 15.6001 22.0001L12.6101 20.2301C12.3001 20.0501 11.7001 20.0501 11.4001 20.2301L8.40012 22.0001C6.63012 23.0501 5.59012 22.6301 5.12012 22.2901C4.66012 21.9501 3.94012 21.0801 4.41012 19.0801L5.12012 16.0101C5.20012 15.6901 5.04012 15.1401 4.80012 14.9001L2.32012 12.4201C1.08012 11.1801 1.18012 10.1201 1.35012 9.60007C1.52012 9.08007 2.06012 8.16007 3.78012 7.87007L6.97012 7.34007C7.27012 7.29007 7.70012 6.97007 7.83012 6.70007L9.60012 3.17007C10.4001 1.56007 11.4501 1.32007 12.0001 1.32007C12.5501 1.32007 13.6001 1.56007 14.4001 3.17007L16.1601 6.69007C16.3001 6.96007 16.7301 7.28007 17.0301 7.33007L20.2201 7.86007C21.9501 8.15007 22.4901 9.07007 22.6501 9.59007C22.8101 10.1101 22.9101 11.1701 21.6801 12.4101L19.2001 14.9001C18.9601 15.1401 18.8101 15.6801 18.8801 16.0101L19.5901 19.0801C20.0501 21.0801 19.3401 21.9501 18.8801 22.2901C18.6301 22.4701 18.2301 22.6701 17.6601 22.6701ZM12.0001 18.5901C12.4901 18.5901 12.9801 18.7101 13.3701 18.9401L16.3601 20.7101C17.2301 21.2301 17.7801 21.2301 17.9901 21.0801C18.2001 20.9301 18.3501 20.4001 18.1301 19.4201L17.4201 16.3501C17.2301 15.5201 17.5401 14.4501 18.1401 13.8401L20.6201 11.3601C21.1101 10.8701 21.3301 10.3901 21.2301 10.0601C21.1201 9.73007 20.6601 9.46007 19.9801 9.35007L16.7901 8.82007C16.0201 8.69007 15.1801 8.07007 14.8301 7.37007L13.0701 3.85007C12.7501 3.21007 12.3501 2.83007 12.0001 2.83007C11.6501 2.83007 11.2501 3.21007 10.9401 3.85007L9.17012 7.37007C8.82012 8.07007 7.98012 8.69007 7.21012 8.82007L4.03012 9.35007C3.35012 9.46007 2.89012 9.73007 2.78012 10.0601C2.67012 10.3901 2.90012 10.8801 3.39012 11.3601L5.87012 13.8401C6.47012 14.4401 6.78012 15.5201 6.59012 16.3501L5.88012 19.4201C5.65012 20.4101 5.81012 20.9301 6.02012 21.0801C6.23012 21.2301 6.77012 21.2201 7.65012 20.7101L10.6401 18.9401C11.0201 18.7101 11.5101 18.5901 12.0001 18.5901Z" fill="#fff"/>
+        </symbol>
+        <symbol id="document-text" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 22.75H8C4.35 22.75 2.25 20.65 2.25 17V7C2.25 3.35 4.35 1.25 8 1.25H16C19.65 1.25 21.75 3.35 21.75 7V17C21.75 20.65 19.65 22.75 16 22.75ZM8 2.75C5.14 2.75 3.75 4.14 3.75 7V17C3.75 19.86 5.14 21.25 8 21.25H16C18.86 21.25 20.25 19.86 20.25 17V7C20.25 4.14 18.86 2.75 16 2.75H8Z" fill="#fff"/>
+            <path d="M18.5 9.25H16.5C14.98 9.25 13.75 8.02 13.75 6.5V4.5C13.75 4.09 14.09 3.75 14.5 3.75C14.91 3.75 15.25 4.09 15.25 4.5V6.5C15.25 7.19 15.81 7.75 16.5 7.75H18.5C18.91 7.75 19.25 8.09 19.25 8.5C19.25 8.91 18.91 9.25 18.5 9.25Z" fill="#fff"/>
+            <path d="M12 13.75H8C7.59 13.75 7.25 13.41 7.25 13C7.25 12.59 7.59 12.25 8 12.25H12C12.41 12.25 12.75 12.59 12.75 13C12.75 13.41 12.41 13.75 12 13.75Z" fill="#fff"/>
+            <path d="M16 17.75H8C7.59 17.75 7.25 17.41 7.25 17C7.25 16.59 7.59 16.25 8 16.25H16C16.41 16.25 16.75 16.59 16.75 17C16.75 17.41 16.41 17.75 16 17.75Z" fill="#fff"/>
+        </symbol>
+        <symbol id="microscope" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.0301 11.5199C14.7901 11.5199 14.5501 11.3999 14.4101 11.1899L11.2101 6.40994C11.1001 6.23994 11.0601 6.03994 11.1001 5.84994C11.1401 5.65994 11.2501 5.47993 11.4201 5.36993L17.0801 1.57992C17.5201 1.27992 18.0501 1.17993 18.5701 1.27993C19.0901 1.37993 19.5401 1.67993 19.8401 2.11993L21.6601 4.82992C22.2701 5.73992 22.0301 6.97993 21.1101 7.58993L15.4601 11.3799C15.3201 11.4799 15.1801 11.5199 15.0301 11.5199ZM12.8801 6.19995L15.2401 9.72995L20.2701 6.35992C20.5001 6.20992 20.5601 5.89993 20.4001 5.67993L18.5801 2.96994C18.5101 2.85994 18.4001 2.78994 18.2701 2.75994C18.1401 2.72994 18.0101 2.75992 17.9001 2.82992L12.8801 6.19995Z" fill="#fff"/>
+            <path d="M9.93973 14.24C9.69973 14.24 9.45973 14.12 9.31973 13.91L6.75973 10.09C6.52973 9.75002 6.61973 9.28001 6.96973 9.05001L11.7497 5.85003C11.9197 5.74003 12.1197 5.70001 12.3097 5.74001C12.5097 5.78001 12.6797 5.89002 12.7897 6.06002L15.3497 9.88003C15.5797 10.22 15.4897 10.69 15.1397 10.92L10.3597 14.12C10.2297 14.2 10.0797 14.24 9.93973 14.24ZM8.41973 9.88003L10.1397 12.45L13.6697 10.09L11.9497 7.51003L8.41973 9.88003Z" fill="#fff"/>
+            <path d="M5.28039 16.82C4.72039 16.82 4.16039 16.55 3.82039 16.04L2.69039 14.36C2.43039 13.97 2.34039 13.51 2.43039 13.05C2.52039 12.59 2.78039 12.2 3.17039 11.94L7.12039 9.30001C7.46039 9.07001 7.9304 9.16003 8.1604 9.51003L10.4004 12.85C10.6304 13.19 10.5404 13.66 10.1904 13.89L6.24039 16.53C5.95039 16.72 5.61039 16.82 5.28039 16.82ZM7.33039 10.95L4.01039 13.17C3.90039 13.25 3.86039 13.4 3.94039 13.52L5.07039 15.2C5.15039 15.31 5.30039 15.35 5.42039 15.27L8.74039 13.05L7.33039 10.95Z" fill="#fff"/>
+            <path d="M7.56019 22.7498C7.46019 22.7498 7.3502 22.7298 7.2502 22.6798C6.8702 22.5098 6.71019 22.0599 6.88019 21.6899L11.3702 11.8899C11.5402 11.5099 11.9902 11.3498 12.3602 11.5198C12.7402 11.6898 12.9002 12.1399 12.7302 12.5099L8.24019 22.3098C8.11019 22.5898 7.84019 22.7498 7.56019 22.7498Z" fill="#fff"/>
+            <path d="M16.44 22.75C16.15 22.75 15.88 22.59 15.76 22.31L11.32 12.51C11.15 12.13 11.32 11.69 11.69 11.52C12.06 11.35 12.51 11.52 12.68 11.89L17.12 21.69C17.29 22.07 17.12 22.51 16.75 22.68C16.65 22.73 16.55 22.75 16.44 22.75Z" fill="#fff"/>
+        </symbol>
+        <symbol id="chart" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 9.64 2 7.4 3.42 5.52C3.67 5.19 4.14 5.13 4.47 5.38C4.8 5.63 4.87 6.1 4.62 6.43C3.4 8.04 2.75 9.97 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75C11.59 2.75 11.25 2.41 11.25 2C11.25 1.59 11.59 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75Z" fill="#fff"/>
+            <path d="M12 19.75C7.73 19.75 4.25 16.27 4.25 12C4.25 11.59 4.59 11.25 5 11.25C5.41 11.25 5.75 11.59 5.75 12C5.75 15.45 8.55 18.25 12 18.25C15.45 18.25 18.25 15.45 18.25 12C18.25 8.55 15.45 5.75 12 5.75C11.59 5.75 11.25 5.41 11.25 5C11.25 4.59 11.59 4.25 12 4.25C16.27 4.25 19.75 7.73 19.75 12C19.75 16.27 16.27 19.75 12 19.75Z" fill="#fff"/>
+            <path d="M12 16.75C11.59 16.75 11.25 16.41 11.25 16C11.25 15.59 11.59 15.25 12 15.25C13.79 15.25 15.25 13.79 15.25 12C15.25 10.21 13.79 8.75 12 8.75C11.59 8.75 11.25 8.41 11.25 8C11.25 7.59 11.59 7.25 12 7.25C14.62 7.25 16.75 9.38 16.75 12C16.75 14.62 14.62 16.75 12 16.75Z" fill="#fff"/>
+        </symbol>
+        <symbol id="github" viewBox="0 0 496 512">
+            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+            </path>
+        </symbol>
+        <symbol id="linkdin" viewBox="0 0 448 512">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+            </path>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 448 512">
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+            </path>
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <img src="images/Odyssey.jpg" alt="Logo">
+                <div class="header__nav">
+                    <a href="#">Stay Connected</a>
+                    <a href="#">Education</a>
+                    <a href="#">Community</a>
+                    <a href="#">About Us</a>
+                    <a href="#" class="btn btn--black">Sign in </a>
+                </div>
+            </div>
+            <div class="header__visual">
+                <img class="visual__img" src="images/Rectangle 3.png" alt="Space">
+                <div class="visual__shadow"></div>
+                <div class="visual__character">
+                    <img src="images/lost-in-space-3d-cute-girl-in-astronaut-costume-transparent-background-free-png 1.png" alt="Character">
+                </div>
+                <div class="visual__stat">
+                    <div class="stat__top">
+                        <div>
+                            <svg>
+                                <use href="#graph"></use>
+                            </svg>
+                        </div>
+                        <span>Spacewalks</span>
+                    </div>
+                    <div class="stat__bottom">
+                        <img src="images/OBJECTS (1).png" alt="object">
+                        <img src="images/OBJECTS (2).png" alt="object">
+                    </div>
+                </div>
+                <div class="visual__stat">
+                    <div class="stat__top">
+                        <div>
+                            <svg>
+                                <use href="#heart"></use>
+                            </svg>
+                        </div>
+                        <span>Exercising</span>
+                    </div>
+                    <div class="stat__bottom">
+                        <img src="images/OBJECTS (3).png" alt="object">
+                    </div>
+                </div>
+                <div class="visual__stat visual__stat--dark">
+                    <div class="stat__top">
+                        <div>
+                            <svg>
+                                <use href="#timer"></use>
+                            </svg>
+                        </div>
+                    <span>Total time in space </span>
+                    </div>
+                    <div class="stat__bottom">
+                        <span>352D 5H 49M 20S</span>
+                    </div>
+                </div>
+                <h1 class="visual__text">Unveiling the Wonders of the Universe</h1>
+            </div>
+            <div class="header__bottom">
+                <p>At odissey, our mission is to inspire, educate, and ignite your passion for the cosmos. We are your premier destination for all things related to space exploration, astronomy, and the mysteries of the universe. Whether you're a seasoned astronomer or a curious novice, join us on a journey to the furthest reaches of the cosmos. </p>
+                <div class="header__bottom-links">
+                    <a href="#" class="btn btn--black">Get Started</a>
+                    <a href="#">Watch the Video</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__logos">
+                <a href="#">
+                    <img src="images/SpaceX-Logo 1 (1).png" alt="SpaceX">
+                </a>
+                <a href="#">
+                    <img src="images/2560px-NASA_Worm_logo_(black) 1.png" alt="NASA">
+                </a>
+                <a href="#">
+                    <img src="images/Boeing-Logo-1960-present 1.png" alt="Boeing">
+                </a>
+                <a href="#">
+                    <img src="images/Astroscale_Main_Logo_RGB 1.png" alt="Astroscale">
+                </a>
+            </div>
+            <div class="main__features">
+                <div class="feature__title">
+                    <h2>Join our vibrant community of space enthusiasts where you can</h2>
+                </div>
+                <div class="feature__cards">
+                    <div class="feature__card">
+                        <div>
+                            <svg>
+                                <use href="#star"></use>
+                            </svg>
+                        </div>
+                        <h4 class="card__title">Astronomy 101</h4>
+                        <span class="card__text">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</span>
+                    </div>
+                    <div class="feature__card">
+                        <div>
+                            <svg>
+                                <use href="#document-text"></use>
+                            </svg>
+                        </div>
+                        <h4 class="card__title">Latest Discoveries</h4>
+                        <span class="card__text">Stay up-to-date with the most recent breakthroughs and discoveries in the field of astrophysics and space exploration.</span>
+                    </div>
+                    <div class="feature__card">
+                        <div>
+                            <svg>
+                                <use href="#microscope"></use>
+                            </svg>
+                        </div>
+                        <h4 class="card__title">Space Exploration</h4>
+                        <span class="card__text">Explore the latest missions, both past and present, from NASA, ESA, SpaceX, and other space agencies and organizations.</span>
+                    </div>
+                    <div class="feature__card">
+                        <div>
+                            <svg>
+                                <use href="#chart"></use>
+                            </svg>
+                        </div>
+                        <h4 class="card__title">Space Technology</h4>
+                        <span class="card__text">Delve into the cutting-edge technology powering space exploration, from spacecraft and telescopes to propulsion systems and space habitats.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main__topics">
+                <img src="images/Rectangle 8.png" alt="Space">
+                <h2 class="topic__title">We are committed to making space science accessible to all. Explore our educational resources, including</h2>
+                <div class="topic__cards">
+                    <div class="topic__card">
+                        <span class="card__num">01.</span>
+                        <h4 class="card__title">Online free courses and tutorials</h4>
+                        <span class="card__text">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</span>
+                    </div>
+                    <div class="topic__card">
+                        <span class="card__num">02.</span>
+                        <h4 class="card__title">Online free courses and tutorials</h4>
+                        <span class="card__text">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</span>
+                    </div>
+                    <div class="topic__card">
+                        <span class="card__num">03.</span>
+                        <h4 class="card__title">Online free courses and tutorials</h4>
+                        <span class="card__text">Dive into the basics of astronomy. Learn about stars, planets, galaxies, and the tools astronomers use to explore the universe.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__newsletter">
+                <img src="images/Rectangle 504.png" alt="Space">
+                <div class="newsletter__text">
+                    <h3>Join our community</h3>
+                    <p>of stargazers, explorers, and cosmic enthusiasts as we embark on a journey through the cosmos like never before.</p>
+                    <div class="newsletter__subscribe">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn" type="submit">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__links">
+                <div class="dev__info">
+                    <div class="info__text">Made with ♥ by <span>Faeze</span>
+                    </div>
+                    <div class="info__social">
+                        <a href="https://github.com/faezeqj">
+                            <svg>
+                                <use href="#github"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/faezeqj">
+                            <svg>
+                                <use href="#linkdin"></use>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/faeeze.q">
+                            <svg>
+                                <use href="#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="links__legal">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Terms & Agreements</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
